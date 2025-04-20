@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <title>Leviticus Drone Services - Aerial Photography & Videography in Kenya</title>
+  <meta name="description" content="Professional drone services in Kenya, offering aerial photography, real estate filming, event coverage, and inspection services at competitive prices. Contact us today!">
+  <meta name="keywords" content="drone services Kenya, aerial photography Kenya, real estate filming, event coverage, inspection services, Leviticus Drone Services">
+  <meta name="author" content="Leviticus Drone Services">
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="Leviticus Drone Services - Aerial Photography & Videography in Kenya">
+  <meta property="og:description" content="Professional drone services in Kenya, offering aerial photography, real estate filming, event coverage, and inspection services at competitive prices. Contact us today!">
+  <meta property="og:image" content="https://ucarecdn.com/31dbbf4c-97c2-4307-bdde-bd655c6f72cc/-/format/auto/">
+  <meta property="og:url" content="https://yourusername.github.io/leviticus-drone-services/">
+  <meta property="og:type" content="website">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://www.favicon-generator.org/favicons/2023-10-25/6b5f1e8e7c7d4e8e9d8f7e6d5c4b3a2.ico">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React and ReactDOM CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel CDN for JSX transformation -->
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
+  <style>
+    /* Loading indicator styles */
+    #loading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f4f6;
+      font-size: 1.5rem;
+      color: #1e40af;
+    }
+    #loading::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      margin-top: 1rem;
+      border: 4px solid #1e40af;
+      border-top: 4px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #error {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f4f6;
+      font-size: 1.5rem;
+      color: #b91c1c;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading indicator -->
+  <div id="loading">Loading Leviticus Drone Services...</div>
+  <!-- Error fallback -->
+  <div id="error">Failed to load Leviticus Drone Services. Please try refreshing the page or contact support.</div>
+  <!-- Root div for React to render into -->
+  <div id="root" style={{ display: 'none' }}></div>
+
+  <!-- React Component Code -->
+  <script type="text/babel">
+    try {
+      // Access useState and useEffect directly from the global React object
+      const { useState, useEffect } = React;
+
+      function MainComponent() {
+        const [selectedService, setSelectedService] = useState(null);
+        const [formData, setFormData] = useState({
+          name: "",
+          email: "",
+          message: "",
+        });
+        const [selectedImage, setSelectedImage] = useState(null);
+
+        const contactInfo = {
+          email: "leviticus.okamu@gmail.com",
+          phone: "+254799563135",
+          whatsapp: "254799563135",
+          instagram: "https://www.instagram.com/helenas_boy/",
+          facebook: "https://www.facebook.com/leviticussoita1",
+        };
+
+        const droneServices = [
+          {
+            id: 1,
+            name: "Aerial Photography",
+            description: "High-quality aerial photos of properties or events",
+            price: 9000,
+            image: "https://images.unsplash.com/photo-1503428593587-cb57929e6b77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+          },
+          {
+            id: 2,
+            name: "Real Estate Filming",
+            description: "Complete property showcase from above",
+            price: 15000,
+            image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+          },
+          {
+            id: 3,
+            name: "Event Coverage",
+            description: "Aerial footage of outdoor events and celebrations",
+            price: 22000,
+            image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+          },
+          {
+            id: 4,
+            name: "Inspection Services",
+            description: "Roof, tower, or infrastructure inspection",
+            price: 30000,
+            image: "https://images.unsplash.com/photo-1508979997765-4e07b7c78a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+          },
+        ];
+
+        const galleryImages = [
+          {
+            src: "https://images.unsplash.com/photo-1599999128601-a8a9e76db5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Cityscape Aerial View",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1518495973545-6c0e6672d2a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Forest Aerial View",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Beach Aerial View",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Mountain Aerial View",
+          },
+        ];
+
+        // Package-specific images
+        const packageImages = [
+          // Aerial Photography (id: 1)
+          {
+            src: "https://images.unsplash.com/photo-1503428593587-cb57929e6b77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Aerial View of a Property",
+            serviceId: 1,
+          },
+          {
+            src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Aerial Shot of a Landscape",
+            serviceId: 1,
+          },
+          // Real Estate Filming (id: 2)
+          {
+            src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Aerial View of a Luxury Estate",
+            serviceId: 2,
+          },
+          {
+            src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Drone Shot of a Modern Home",
+            serviceId: 2,
+          },
+          // Event Coverage (id: 3)
+          {
+            src: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Aerial View of an Outdoor Wedding",
+            serviceId: 3,
+          },
+          {
+            src: "https://images.unsplash.com/photo-1505373877841-8d25f7d466b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Drone Shot of a Festival",
+            serviceId: 3,
+          },
+          // Inspection Services (id: 4)
+          {
+            src: "https://images.unsplash.com/photo-1508979997765-4e07b7c78a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Aerial Inspection of a Roof",
+            serviceId: 4,
+          },
+          {
+            src: "https://images.unsplash.com/photo-1612872087720-bb876e2e77d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+            caption: "Drone Inspection of a Tower",
+            serviceId: 4,
+          },
+        ];
+
+        const pricingComparison = [
+          { service: "Aerial Photography", ourPrice: 9000, competitorPrice: 10500 },
+          { service: "Real Estate Filming", ourPrice: 15000, competitorPrice: 17000 },
+          { service: "Event Coverage", ourPrice: 22000, competitorPrice: 25000 },
+          { service: "Inspection Services", ourPrice: 30000, competitorPrice: 35000 },
+        ];
+
+        const testimonials = [
+          {
+            name: "John Kamau",
+            role: "Real Estate Developer",
+            quote: "Leviticus Drone Services captured stunning aerial footage of my properties, helping me attract more buyers. Their professionalism is unmatched!",
+          },
+          {
+            name: "Sarah Wanjiku",
+            role: "Event Organizer",
+            quote: "The drone coverage of our outdoor wedding was breathtaking. They delivered high-quality footage on time, and I couldn’t be happier!",
+          },
+          {
+            name: "Michael Otieno",
+            role: "Construction Manager",
+            quote: "Their inspection services saved us time and money by identifying issues early. Highly recommend Leviticus for any aerial needs.",
+          },
+        ];
+
+        const handleInputChange = (e) => {
+          const { name, value } = e.target;
+          setFormData({ ...formData, [name]: value });
+        };
+
+        const handleSubmit = () => {
+          const subject = encodeURIComponent(`Inquiry from ${formData.name}`);
+          const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
+          window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
+        };
+
+        const openLightbox = (image) => {
+          setSelectedImage(image);
+          document.body.style.overflow = 'hidden'; // Prevent scrolling
+        };
+
+        const closeLightbox = () => {
+          setSelectedImage(null);
+          document.body.style.overflow = 'auto'; // Restore scrolling
+        };
+
+        const handleKeyDown = (e) => {
+          if (!selectedImage) return;
+          let imagesToNavigate = galleryImages;
+          if (selectedImage.serviceId) {
+            imagesToNavigate = packageImages.filter(img => img.serviceId === selectedImage.serviceId);
+          }
+          const currentIndex = imagesToNavigate.findIndex(img => img.src === selectedImage.src);
+          if (e.key === 'Escape') {
+            closeLightbox();
+          } else if (e.key === 'ArrowLeft') {
+            const prevIndex = (currentIndex - 1 + imagesToNavigate.length) % imagesToNavigate.length;
+            setSelectedImage(imagesToNavigate[prevIndex]);
+          } else if (e.key === 'ArrowRight') {
+            const nextIndex = (currentIndex + 1) % imagesToNavigate.length;
+            setSelectedImage(imagesToNavigate[nextIndex]);
+          }
+        };
+
+        useEffect(() => {
+          const loadingElement = document.getElementById('loading');
+          const rootElement = document.getElementById('root');
+          loadingElement.style.display = 'none';
+          rootElement.style.display = 'block';
+          // Add keydown event listener for lightbox navigation
+          window.addEventListener('keydown', handleKeyDown);
+          return () => window.removeEventListener('keydown', handleKeyDown);
+        }, []); // Removed selectedImage from dependency array
+
+        return (
+          <div className="min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
+            <div className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+              <div className="absolute inset-0 bg-black opacity-50"></div>
+              <div className="relative max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                  <div className="md:w-1/2 text-center md:text-left">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                      Leviticus Drone Services
+                    </h1>
+                    <p className="text-xl md:text-2xl mb-6 text-gray-200">
+                      Elevating Perspectives Across Kenya
+                    </p>
+                    <p className="text-lg mb-8">
+                      Premium aerial photography and videography services delivered
+                      with expertise across Kenya, specializing in real estate filming,
+                      event coverage, and inspection services.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                      <a
+                        href="tel:+254799563135"
+                        className="bg-white text-blue-700 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors text-center"
+                        aria-label="Call Leviticus Drone Services at +254799563135"
+                      >
+                        Call Now: +254799563135
+                      </a>
+                      <a
+                        href="https://wa.me/254799563135?text=Hello%2C%20I%27m%20interested%20in%20your%20drone%20services."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors text-center"
+                        aria-label="Contact Leviticus Drone Services via WhatsApp"
+                      >
+                        WhatsApp: +254799563135
+                      </a>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2">
+                    <img
+                      src="https://ucarecdn.com/31dbbf4c-97c2-4307-bdde-bd655c6f72cc/-/format/auto/"
+                      alt="Professional drone used by Leviticus Drone Services for aerial photography and videography in Kenya"
+                      className="w-full max-w-md mx-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        e.target.src = 'https://via.placeholder.com/400x300.png?text=Drone+Image+Not+Found';
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">
+                Our Professional Services
+              </h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {droneServices.map((service) => (
+                  <div
+                    key={service.id}
+                    className={`p-8 rounded-2xl cursor-pointer transition-all duration-300 transform hover:-translate-y-1 ${
+                      selectedService?.id === service.id
+                        ? "bg-blue-100 border-2 border-blue-500 shadow-xl"
+                        : "bg-white hover:shadow-2xl"
+                    }`}
+                    onClick={() => setSelectedService(service)}
+                    role="button"
+                    tabIndex="0"
+                    onKeyPress={(e) => e.key === 'Enter' && setSelectedService(service)}
+                    aria-label={`Select ${service.name} service`}
+                  >
+                    {service.image && (
+                      <img
+                        src={service.image}
+                        alt={`Example of ${service.name} by Leviticus Drone Services in Kenya`}
+                        className="w-full h-48 object-cover rounded-lg mb-4"
+                        loading="lazy"
+                      />
+                    )}
+                    <h3 className="text-2xl font-bold mb-3 text-blue-800">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-600 mb-4 text-lg">
+                      {service.description}
+                    </p>
+                    <div className="text-3xl font-bold text-blue-700">
+                      KES {service.price.toLocaleString()}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {selectedService && (
+                <div className="mt-12 p-8 bg-white rounded-2xl shadow-xl border border-blue-100">
+                  <h3 className="text-3xl font-bold mb-6 text-blue-800">
+                    Book Your Service
+                  </h3>
+                  <p className="text-xl mb-3">Service: {selectedService.name}</p>
+                  <p className="text-xl mb-4 text-gray-600">
+                    Description: {selectedService.description}
+                  </p>
+                  <p className="text-3xl font-bold text-blue-700 mb-6">
+                    KES {selectedService.price.toLocaleString()}
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <button
+                      className="bg-blue-700 text-white px-8 py-4 rounded-full hover:bg-blue-800 transition-colors flex-1 text-lg font-semibold shadow-lg"
+                      onClick={() =>
+                        (window.location.href = `mailto:${contactInfo.email}?subject=Booking ${selectedService.name} with Leviticus Drone Services`)
+                      }
+                      aria-label={`Email to book ${selectedService.name} with Leviticus Drone Services`}
+                    >
+                      Email Us
+                    </button>
+                    <a
+                      href={`tel:${contactInfo.phone}`}
+                      className="bg-green-600 text-white px-8 py-4 rounded-full hover:bg-green-700 transition-colors text-center flex-1 text-lg font-semibold shadow-lg"
+                      aria-label={`Call to book ${selectedService.name} with Leviticus Drone Services`}
+                    >
+                      Call Us
+                    </a>
+                    <a
+                      href={`https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent(
+                        `I'm interested in booking ${selectedService.name} with Leviticus Drone Services`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-green-500 text-white px-8 py-4 rounded-full hover:bg-green-600 transition-colors text-center flex-1 text-lg font-semibold shadow-lg"
+                      aria-label={`WhatsApp to book ${selectedService.name} with Leviticus Drone Services`}
+                    >
+                      WhatsApp
+                    </a>
+                  </div>
+                  {/* Package-specific Gallery */}
+                  <div className="mt-8">
+                    <h4 className="text-xl font-bold text-blue-800 mb-4">
+                      Sample Work for {selectedService.name}
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      {packageImages
+                        .filter((image) => image.serviceId === selectedService.id)
+                        .map((image, index) => (
+                          <div
+                            key={index}
+                            className="relative group cursor-pointer"
+                            onClick={() => openLightbox(image)}
+                            role="button"
+                            tabIndex="0"
+                            onKeyPress={(e) => e.key === 'Enter' && openLightbox(image)}
+                            aria-label={`View ${image.caption} in full size`}
+                          >
+                            <img
+                              src={image.src}
+                              alt={`Sample of ${selectedService.name} - ${image.caption.toLowerCase()} by Leviticus Drone Services in Kenya`}
+                              className="w-full h-48 object-cover rounded-lg shadow-md transform group-hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                              <p className="text-white text-lg font-semibold">{image.caption}</p>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <div className="mt-16 text-center bg-white p-8 rounded-2xl shadow-lg">
+                <h2 className="text-2xl font-bold text-blue-800 mb-6">
+                  Our Work Gallery
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Explore some of our stunning drone footage showcasing various landscapes and projects. Click on any image to view it in full size.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {galleryImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className="relative group cursor-pointer"
+                      onClick={() => openLightbox(image)}
+                      role="button"
+                      tabIndex="0"
+                      onKeyPress={(e) => e.key === 'Enter' && openLightbox(image)}
+                      aria-label={`View ${image.caption} in full size`}
+                    >
+                      <img
+                        src={image.src}
+                        alt={`Drone footage of ${image.caption.toLowerCase()} by Leviticus Drone Services in Kenya`}
+                        className="w-full h-64 object-cover rounded-lg shadow-md transform group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                        <p className="text-white text-lg font-semibold">{image.caption}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-16 text-center bg-white p-8 rounded-2xl shadow-lg">
+                <h2 className="text-2xl font-bold text-blue-800 mb-6">
+                  Compare Drone Pricing
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Compare our pricing with a typical competitor to see the value we offer.
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full bg-white border border-gray-200 rounded-lg">
+                    <thead>
+                      <tr className="bg-blue-100 text-blue-800">
+                        <th className="px-6 py-3 text-left text-lg font-semibold border-b">Service</th>
+                        <th className="px-6 py-3 text-left text-lg font-semibold border-b">Leviticus Drone Services</th>
+                        <th className="px-6 py-3 text-left text-lg font-semibold border-b">Competitor (Sample)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {pricingComparison.map((item, index) => (
+                        <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                          <td className="px-6 py-4 border-b text-gray-700">{item.service}</td>
+                          <td className="px-6 py-4 border-b text-blue-700 font-semibold">
+                            KES {item.ourPrice.toLocaleString()}
+                          </td>
+                          <td className="px-6 py-4 border-b text-gray-600">
+                            KES {item.competitorPrice.toLocaleString()}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Testimonials Section */}
+              <div className="mt-16 text-center bg-white p-8 rounded-2xl shadow-lg">
+                <h2 className="text-2xl font-bold text-blue-800 mb-6">
+                  What Our Clients Say
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  Hear from our satisfied clients about their experience with Leviticus Drone Services.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {testimonials.map((testimonial, index) => (
+                    <div
+                      key={index}
+                      className="p-6 bg-blue-50 rounded-lg shadow-md"
+                    >
+                      <p className="text-gray-600 italic mb-4">
+                        "{testimonial.quote}"
+                      </p>
+                      <p className="text-blue-800 font-semibold">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-gray-500">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact Section - Moved to the Bottom */}
+              <div className="mt-16 text-center bg-white p-8 rounded-2xl shadow-lg">
+                <h2 className="text-2xl font-bold text-blue-800 mb-6">
+                  Contact Leviticus Drone Services
+                </h2>
+                <div className="space-y-4 text-lg">
+                  <p className="flex items-center justify-center gap-2">
+                    <span className="text-2xl">📧</span>
+                    <span className="text-gray-700">{contactInfo.email}</span>
+                  </p>
+                  <p className="flex items-center justify-center gap-2">
+                    <span className="text-2xl">📱</span>
+                    <span className="text-gray-700">{contactInfo.phone}</span>
+                  </p>
+                </div>
+                <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+                  Our prices are starting points and may vary based on specific
+                  project requirements. Contact us for custom packages or special
+                  requirements. We're here to deliver the perfect aerial solution for
+                  your needs.
+                </p>
+                <div className="mt-8 max-w-lg mx-auto">
+                  <h3 className="text-xl font-bold text-blue-800 mb-4">
+                    Send Us a Message
+                  </h3>
+                  <div className="space-y-4">
+                    <div>
+                      <label htmlFor="name" className="sr-only">Your Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="Your Name"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                        aria-required="true"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="sr-only">Your Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="Your Email"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                        aria-required="true"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="sr-only">Your Message</label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Your Message"
+                        rows="4"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                        aria-required="true"
+                      ></textarea>
+                    </div>
+                    <button
+                      onClick={handleSubmit}
+                      className="w-full bg-blue-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-800 transition-colors"
+                      aria-label="Submit inquiry to Leviticus Drone Services"
+                    >
+                      Submit Inquiry
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {selectedImage && (
+              <div
+                className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Image lightbox"
+              >
+                <div className="relative max-w-4xl w-full mx-4">
+                  <button
+                    className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+                    onClick={closeLightbox}
+                    aria-label="Close image lightbox"
+                  >
+                    ×
+                  </button>
+                  <button
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl font-bold hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+                    onClick={() => {
+                      let imagesToNavigate = galleryImages;
+                      if (selectedImage.serviceId) {
+                        imagesToNavigate = packageImages.filter(img => img.serviceId === selectedImage.serviceId);
+                      }
+                      const currentIndex = imagesToNavigate.findIndex(img => img.src === selectedImage.src);
+                      const prevIndex = (currentIndex - 1 + imagesToNavigate.length) % imagesToNavigate.length;
+                      setSelectedImage(imagesToNavigate[prevIndex]);
+                    }}
+                    aria-label="View previous image"
+                  >
+                    ←
+                  </button>
+                  <button
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl font-bold hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+                    onClick={() => {
+                      let imagesToNavigate = galleryImages;
+                      if (selectedImage.serviceId) {
+                        imagesToNavigate = packageImages.filter(img => img.serviceId === selectedImage.serviceId);
+                      }
+                      const currentIndex = imagesToNavigate.findIndex(img => img.src === selectedImage.src);
+                      const nextIndex = (currentIndex + 1) % imagesToNavigate.length;
+                      setSelectedImage(imagesToNavigate[nextIndex]);
+                    }}
+                    aria-label="View next image"
+                  >
+                    →
+                  </button>
+                  <img
+                    src={selectedImage.src}
+                    alt={`Full-size view of ${selectedImage.caption.toLowerCase()} by Leviticus Drone Services in Kenya`}
+                    className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+                  />
+                  <p className="text-white text-center mt-4 text-lg font-semibold">
+                    {selectedImage.caption}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Footer Section */}
+            <footer className="bg-blue-900 text-white py-8">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                  <div className="text-center md:text-left">
+                    <h3 className="text-xl font-bold mb-2">
+                      Leviticus Drone Services
+                    </h3>
+                    <p className="text-gray-300">
+                      Elevating Perspectives Across Kenya
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center md:items-end gap-2">
+                    <p className="flex items-center gap-2">
+                      <span className="text-lg">📧</span>
+                      <a href={`mailto:${contactInfo.email}`} className="hover:underline">
+                        {contactInfo.email}
+                      </a>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="text-lg">📱</span>
+                      <a href={`tel:${contactInfo.phone}`} className="hover:underline">
+                        {contactInfo.phone}
+                      </a>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="text-lg">💬</span>
+                      <a
+                        href={`https://wa.me/${contactInfo.whatsapp}?text=Hello%2C%20I%27m%20interested%20in%20your%20drone%20services.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        WhatsApp: +254799563135
+                      </a>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="text-lg">📸</span>
+                      <a
+                        href={contactInfo.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        Instagram: @helenas_boy
+                      </a>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <span className="text-lg">📘</span>
+                      <a
+                        href={contactInfo.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        Facebook: @leviticussoita1
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 text-center text-gray-400 text-sm">
+                  <p>© {new Date().getFullYear()} Leviticus Drone Services. All rights reserved.</p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        );
+      }
+
+      // Render the React component into the root div
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<MainComponent />);
+    } catch (error) {
+      console.error('Failed to render React component:', error);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
